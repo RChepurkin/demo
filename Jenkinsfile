@@ -25,6 +25,7 @@ pipeline {
             sh "mvn versions:set -DnewVersion=\$(cat VERSION)"
             sh "ls"
             sh "ls /"
+            sh "env"
           }
 
         }
