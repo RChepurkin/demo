@@ -7,6 +7,7 @@ pipeline {
       APP_NAME          = 'demo'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
+    stages {
 
       stage('Build Release') {
         when {
@@ -29,6 +30,7 @@ pipeline {
         }
       }
 
+    }
     post {
         always {
             cleanWs()
